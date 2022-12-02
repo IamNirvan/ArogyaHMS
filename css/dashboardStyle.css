@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    display: flex;
+}
+
+/* Nav and user name section */
+.box:nth-child(1) {
+    height: 100%;
+    width: 15%;
+    background-color: #19274E;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+/* navigation */
+#navigation {
+    width: 100%;
+}
+
+#navigation ul li{
+    margin: 0px 0px;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+/* Highlight the dashboard option */
+#navigation ul li:nth-child(1){
+    margin: 0px 0px;
+    padding: 15px 20px;
+    background-color: #303c5f;
+}
+
+#navigation ul li:hover {
+    background-color: #303c5f;
+    transition: 0.5s;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.itemBox {
+    display: flex;
+    align-items: center;
+}
+
+#imageBox1 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/dashboard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#imageBox2 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/patient.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#imageBox3 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/employees.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#imageBox4 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/surgery-room.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#imageBox5 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/appointments.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#imageBox6 {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../images/icons/bill.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/* User account information */
+#userAccount {
+    width: 100%;
+    padding: 20px;
+    font-size: 13px;
+    color: #fff;
+    border-top: 1px solid #303c5f;
+}
+
+#userAccount h3 {
+    color: #fff;
+}
+
+/* Main section */
+.box:nth-child(2) {
+    height: 100%;
+    width: 85%;
+    background-color: #fff;
+}
+
+#landscapeBox {
+    width: 100%;
+    height: 40%;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.boxItem {
+    width: 300px;
+    height: 40px;
+    background-color: #19274E;
+    margin: 10px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxItem h3 {
+    font-weight: normal;
+    font-size: 13px;
+    color: #fff;
+    margin: 0px 20px 0px 10px;
+}
+
+.boxItem div {
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#informationBox {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.informationBoxItem{
+    width: 45%;
+    height: 90%;
+    background-color: #303c5f;
+}

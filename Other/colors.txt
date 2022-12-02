@@ -1,0 +1,15 @@
+Primary: #37474F
+Secondary: #ECEFF1
+
+*******************
+
+Accent: #19274E
+Lighter accent: #303c5f
+
+Dark gray: #3e3e3e
+White: #fff;
+darker-white: #e5e5e5
+
+Green:
+Red:
+Dull-gray: #ababab
