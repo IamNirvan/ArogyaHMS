@@ -1,8 +1,5 @@
 <?php
-
-require $_SERVER["DOCUMENT_ROOT"]."/1_HND/HMS/classes/database/QueryHandler.php";
-
-session_start();
+require $_SERVER["DOCUMENT_ROOT"]."/1_HND/HMS/includes/database/queryHandler.php";
 
 // Get the username and password from the login page
 $username = $_POST["username"];
@@ -11,22 +8,20 @@ $password = $_POST["password"];
 // Validate input
 if(!empty($username) && !empty($password)) {
     // Check if the user account can be found
-    $query = "SELECT * FROM arogyahms.useraccount WHERE username = '$username'";
-    $result = QueryHandler::handleSelectQuery($query);
+    $query = "SELECT * FROM useraccount WHERE username = '$username'";
+    $result = handleSelectQuery($query);
 
-    if($result != NULL) {
-        $fetched = $result->fetch_assoc();
-
-        // If the account is found, check if the password matches
-        // return the result
-        if($username == $fetched["username"] && $password == $fetched["accountPassword"]) {
-            header("Location: ../dashboard.html");            
+    // Check if a valid result was returned
+    if($result) {
+        // Check if the password matches
+        if($username == $result["username"] && $password == $result["accountPassword"]) {
+            $_SESSION["loggedUser"] = $username;
+            header("Location: ../dashboard.php");            
         }
         else {
-            // incorrect password
+            // Incorrect password
             $_SESSION["passwordError"] = "Incorrect password";
             header("Location: ../loginPage.php?error=Incorrect password");
-
         }
     }
     else {

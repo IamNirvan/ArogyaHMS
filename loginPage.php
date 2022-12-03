@@ -38,11 +38,11 @@
             <div class="formItem">
                 <!-- <h3>
                     <?php
-                        if(isset($_SESSION["usernameError"])) {
-                            echo $_SESSION["usernameError"];
-                        } else {
-                            echo "Username";
-                        }
+                        // if(isset($_SESSION["usernameError"])) {
+                        //     echo $_SESSION["usernameError"];
+                        // } else {
+                        //     echo "Username";
+                        // }
                     ?>
                 </h3> -->
                 <h3>Username</h3>
@@ -51,12 +51,12 @@
             <div class="formItem">
                 <!-- <h3>
                     <?php
-                        if(isset($_SESSION["passwordError"])) {
-                            echo $_SESSION["passwordError"];
-                        }
-                        else {
-                            echo "Password";
-                        }
+                        // if(isset($_SESSION["passwordError"])) {
+                        //     echo $_SESSION["passwordError"];
+                        // }
+                        // else {
+                        //     echo "Password";
+                        // }
                     ?>
                 </h3> -->
                 <h3>Password</h3>
@@ -67,6 +67,5 @@
             </div>
         </form>
     </section>
-    <!-- <script src="./javaScript/login.js"></script> -->
 </body>
 </html>
