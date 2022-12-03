@@ -1,5 +1,12 @@
 <?php
     session_start();
+
+    // Unset the error session variables
+    // if(isset($_SESSION["usernameError"]) && isset($_SESSION["passwordError"]))
+    // {
+    //     unset($_SESSION["usernameError"]);
+    //     unset($_SESSION["passwordError"]);
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -25,24 +32,33 @@
             <h1>Login</h1>
             <p>
                 Welcome back!<br>Sign in to your account
-                to start using the HMS
             </p>
         </div>
-        <form action="">
+        <form method="post" action="./includes/loginHandler.php">
             <div class="formItem">
-                <!-- <h3>Username</h3>     -->
-                <h3>
+                <!-- <h3>
                     <?php
-                        if(isset($_SESSION["userNameError"])) {
-                            echo "Invalid username";
+                        if(isset($_SESSION["usernameError"])) {
+                            echo $_SESSION["usernameError"];
                         } else {
                             echo "Username";
                         }
                     ?>
-                </h3>
+                </h3> -->
+                <h3>Username</h3>
                 <input type="text" name="username" autocomplete="off" required>
             </div>
             <div class="formItem">
+                <!-- <h3>
+                    <?php
+                        if(isset($_SESSION["passwordError"])) {
+                            echo $_SESSION["passwordError"];
+                        }
+                        else {
+                            echo "Password";
+                        }
+                    ?>
+                </h3> -->
                 <h3>Password</h3>
                 <input type="password" name="password" autocomplete="off" required>
             </div>

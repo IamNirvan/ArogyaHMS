@@ -19,7 +19,7 @@ class Account {
       $fetched = $result->fetch_assoc();
 
       // Hash the password using the default algorithm (Bcrypt)
-      $hashedPassword = password_hash($password, PASSWORD_DEFAULT)
+      $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
       // Check if username and password match
       if($fetched['userName'] == $username && $fetched['accountPassword'] == $hashedPassword) {
