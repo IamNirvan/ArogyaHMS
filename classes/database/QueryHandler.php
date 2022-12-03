@@ -1,6 +1,6 @@
 <?php
 
-require "./DatabaseConnection.php";
+require $_SERVER["DOCUMENT_ROOT"]."/1_HND/HMS/classes/database/DatabaseConnection.php";
 
 // This class contains functions that allows for interactions 
 // with the database. They can be accessed via an object of this class.

@@ -1,6 +1,6 @@
 <?php
 
-require "../utility/ErrorPrinter.php";
+require $_SERVER["DOCUMENT_ROOT"]."/1_HND/HMS/classes/utility/ErrorPrinter.php";
 
 // This class is responsible for creating a new connection
 // object and returning it to the caller
@@ -8,7 +8,7 @@ class DatabaseConnection {
   private $username = "root";
   private $password = "";
   private $serverName = "localhost";
-  private $databaseName = "arogya_health_care_v2";
+  private $databaseName = "arogyahms";
 
   public function getConnection() {
     $connection = new mysqli($this->serverName, $this->username, $this->password, $this->databaseName);
