@@ -37,7 +37,7 @@
             <div class="formItem">
                 <div>
                     Patient
-                    <input type="radio" name="accountType" value="patient">
+                    <input type="radio" name="accountType" value="patient" required>
                 </div>
                 <div>
                     Employee
