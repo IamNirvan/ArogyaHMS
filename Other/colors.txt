@@ -1,7 +1,8 @@
 *******************************************************************
 
 #1d1f2d - dark blueish black
-#45495D - gray
+! NOT THIS - #45495D - gray
+#31354B - gray
 #fff - white
 #f0e7fd - blueish white
 #ababab - grayish white

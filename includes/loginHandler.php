@@ -12,10 +12,11 @@ if(!empty($username) && !empty($password) && !empty($accountType)) {
     // Check if the user account can be found
     $query = "SELECT * FROM useraccount WHERE username = '$username' AND accountType = '$accountType';";
     $r = handleSelectQuery($query);
-    $result = mysqli_fetch_assoc($r);
 
     // Check if a valid result was returned
-    if($result) {
+    if($r != false) {
+        $result = mysqli_fetch_assoc($r);
+
         // Check if the password matches
         if($username == $result["username"] && $password == $result["accountPassword"]) {
             $_SESSION["loggedUser"] = $username;
