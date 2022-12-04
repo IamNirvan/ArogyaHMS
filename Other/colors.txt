@@ -1,6 +1,9 @@
 *******************************************************************
 
-Primary (off white) : #FAF9F6
-Primary (blue) : #1D12ED
-Secondary (turquoise): #1275ED
-Accent (purple): #8A12ED;
+#1d1f2d - dark blueish black
+#45495D - gray
+#fff - white
+#f0e7fd - blueish white
+#ababab - grayish white
+#a141f0 - purple
+
