@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    // session_start();
 
     // Unset the error session variables
     // if(isset($_SESSION["usernameError"]) && isset($_SESSION["passwordError"]))
@@ -29,12 +29,26 @@
     <!-- The form and it's elements -->
     <section class="box">
         <div id="textContainer">
-            <h1>Login</h1>
-            <p>
-                Welcome back!<br>Sign in to your account
-            </p>
+            <h1>WELCOME</h1>
+            <p>To proceed, please sign in to your account</p>
         </div>
+     
         <form method="post" action="./includes/loginHandler.php">
+            <div class="formItem">
+                <div>
+                    Patient
+                    <input type="radio" name="accountType" value="patient">
+                </div>
+                <div>
+                    Employee
+                    <input type="radio" name="accountType" value="employee">
+                </div>
+                <div>
+                    Administrator
+                    <input type="radio" name="accountType" value="administrator">
+                </div>
+            </div>
+
             <div class="formItem">
                 <!-- <h3>
                     <?php

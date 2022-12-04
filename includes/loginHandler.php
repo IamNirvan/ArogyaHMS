@@ -1,14 +1,16 @@
 <?php
+session_start();
 require $_SERVER["DOCUMENT_ROOT"]."/1_HND/HMS/includes/database/queryHandler.php";
 
-// Get the username and password from the login page
+// Get the username, password and account type from the login page
 $username = $_POST["username"];
 $password = $_POST["password"];
+$accountType = $_POST["accountType"];
 
 // Validate input
-if(!empty($username) && !empty($password)) {
+if(!empty($username) && !empty($password) && !empty($accountType)) {
     // Check if the user account can be found
-    $query = "SELECT * FROM useraccount WHERE username = '$username'";
+    $query = "SELECT * FROM useraccount WHERE username = '$username' AND accountType = '$accountType';";
     $result = handleSelectQuery($query);
 
     // Check if a valid result was returned
@@ -26,7 +28,7 @@ if(!empty($username) && !empty($password)) {
     }
     else {
         // Account not found
-        $_SESSION["usernameError"] = "Unknown username";
-        header("Location: ../loginPage.php?error=Unknown username");
+        $_SESSION["usernameError"] = "Account not found";
+        header("Location: ../loginPage.php?error=Account not found");
     }
 }
